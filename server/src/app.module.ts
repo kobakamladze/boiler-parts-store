@@ -8,6 +8,7 @@ import { databaseConfig } from './config/configuration';
 import { AuthModule } from './auth/auth.module';
 import { BoilerPartsModule } from './boiler-parts/boiler-parts.module';
 import { ShoppingCartModule } from './shopping-cart/shopping-cart.module';
+import { StripeModule } from './stripe/stripe.module';
 
 @Module({
   imports: [
@@ -15,11 +16,12 @@ import { ShoppingCartModule } from './shopping-cart/shopping-cart.module';
       imports: [ConfigModule],
       useClass: SequelizeConfigService,
     }),
-    ConfigModule.forRoot({ load: [databaseConfig] }),
+    ConfigModule.forRoot({ load: [databaseConfig], isGlobal: true }),
     UsersModule,
     AuthModule,
     BoilerPartsModule,
     ShoppingCartModule,
+    StripeModule,
   ],
   controllers: [],
   providers: [],

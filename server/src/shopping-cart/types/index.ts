@@ -1,6 +1,6 @@
 import { ApiProperty } from '@nestjs/swagger';
 
-class ShoppingCartItem {
+export class ShoppingCartItem {
   @ApiProperty({ example: 1 })
   id: number;
 
