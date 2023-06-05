@@ -4,8 +4,8 @@ import { SequelizeModule } from '@nestjs/sequelize';
 import { ShoppingCartController } from './shopping-cart.controller';
 import { ShoppingCartService } from './shopping-cart.service';
 import { ShoppingCart } from './shopping-cart.model';
-import { UsersModule } from 'src/users/users.module';
-import { BoilerPartsModule } from 'src/boiler-parts/boiler-parts.module';
+import { UsersModule } from '../users/users.module';
+import { BoilerPartsModule } from '../boiler-parts/boiler-parts.module';
 
 @Module({
   imports: [

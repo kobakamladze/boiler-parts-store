@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/sequelize';
 
 import { UsersService } from './../users/users.service';
-import { BoilerPartsService } from 'src/boiler-parts/boiler-parts.service';
+import { BoilerPartsService } from '../boiler-parts/boiler-parts.service';
 import { ShoppingCart } from './shopping-cart.model';
 import { AddToCartDto } from './dto/add-to-cart.dto';
 

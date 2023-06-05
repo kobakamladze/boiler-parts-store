@@ -13,8 +13,8 @@ import { ApiBody, ApiOkResponse } from '@nestjs/swagger';
 
 import { UsersService } from './users.service';
 import { CreateUserDto } from './dto/create-user.dto';
-import { LocalAuthGuard } from 'src/auth/local.auth.guard';
-import { AuthenticatedGuard } from 'src/auth/authenticated.guard';
+import { LocalAuthGuard } from '../auth/local.auth.guard';
+import { AuthenticatedGuard } from '../auth/authenticated.guard';
 
 import {
   UserDataResponse,

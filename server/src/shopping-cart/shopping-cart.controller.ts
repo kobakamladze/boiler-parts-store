@@ -12,7 +12,7 @@ import {
 } from '@nestjs/common';
 
 import { ShoppingCartService } from './shopping-cart.service';
-import { AuthenticatedGuard } from 'src/auth/authenticated.guard';
+import { AuthenticatedGuard } from '../auth/authenticated.guard';
 import { AddToCartDto } from './dto/add-to-cart.dto';
 import {
   GetAllCartItemsResponse,

@@ -1,8 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import Stripe from 'stripe';
 
-import { PaymentDto } from './dto/payment.dto';
-import { ShoppingCartItem } from 'src/shopping-cart/types';
+import { ShoppingCartItem } from '../shopping-cart/types';
 
 @Injectable()
 export class StripeService {

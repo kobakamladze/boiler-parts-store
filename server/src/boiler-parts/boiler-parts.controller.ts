@@ -10,7 +10,7 @@ import {
 } from '@nestjs/common';
 
 import { BoilerPartsService } from './boiler-parts.service';
-import { AuthenticatedGuard } from 'src/auth/authenticated.guard';
+import { AuthenticatedGuard } from '../auth/authenticated.guard';
 import {
   FindOneResponse,
   GetBestsellersResponse,
