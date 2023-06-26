@@ -1,0 +1,31 @@
+version: "3.1"
+
+services:
+  server:
+    build: ./server
+    restart: always
+    ports:
+      - "3000:3000"
+    volumes:
+      - /app/node_modules
+      - ./server:/app
+    depends_on:
+      - db
+    environment:
+      SQL_DIALECT: postgres
+      SQL_LOGGING: true
+      DATABASE_HOST: db
+      DATABASE_PORT: 5432
+      DATABASE_USER: postgres
+      DATABASE_PASSWORD: koba08
+      DATABASE_NAME: nest_online_store
+      STRIPE_PUBLIC_KEY: pk_test_51ND3kZE23BkVLAwbHaI5yEP7BpBccBBSNYukIM74CD0j8xCxgqOhqxrl4uheLl4QUTeS9usw9wmNNzxEAwdTHJH400Jg2DVrxk
+      STRIPE_SECRET_KEY: sk_test_51ND3kZE23BkVLAwbq093SqSAKeTecEnsmvsMjT0twwQ7Lp8Jt55ImzSRUE6jbCoHpPRCNpZ27mfU4FCCHDuPcjpt00ZSgKQ1gN
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: koba08
+    volumes:
+      - ./postgres:/var/lib/postgresql/data

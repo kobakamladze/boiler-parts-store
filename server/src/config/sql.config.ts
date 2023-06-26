@@ -3,7 +3,7 @@ import { Dialect } from 'sequelize';
 
 export const sqlConfig = registerAs('database', () => ({
   dialect: <Dialect>process.env.SQL_DIALECT || 'postgres',
-  logging: Boolean(process.env.LOGGING === 'true'),
+  logging: Boolean(process.env.SQL_LOGGING === 'true'),
   host: process.env.DATABASE_HOST,
   port: process.env.DATABASE_PORT,
   username: process.env.DATABASE_USER,
